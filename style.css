@@ -1,0 +1,112 @@
+body {
+    background: rgb(18, 70, 70);
+    max-width: 1330px;
+    color: azure;
+}
+
+.container{
+    display: grid;
+    grid-template-areas:   
+    'portions portions'
+    'title title'
+    'picture info'
+    'skills skills'
+    'projects projects'
+    'sidebar sidebar';
+    gap: 3rem;
+    ;
+}
+
+.header{
+    grid-area: header;
+}
+
+.title {
+    grid-area: title;
+    text-align: center;
+}
+
+.picture{
+    grid-area: picture;
+}
+
+.info{
+    grid-area: info;
+}
+
+.projects{
+    grid-area: projects;
+    max-height: 500px;
+    align-content: center;
+    color: black;
+}
+
+.skills{
+    grid-area: skills;
+    text-align: center;
+}
+
+.sidebar{
+    display: flex;
+    justify-content: space-around;
+    grid-area: sidebar;
+    text-align: center;
+}
+
+.footer{
+    padding: 20px;
+}
+
+.portions {
+    grid-area: portions;
+    grid-column-end: 3;
+}
+
+#logo {
+    width: 1330px;
+    border: 2px solid red;
+}
+
+#picture {
+    width: 450px;
+    height: 400px;
+}
+
+#AboutMe {
+    width: 700px;
+}
+
+#projects {
+    text-align: center;
+    color: azure;
+}
+
+#portions {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    font-size: 25px;
+}
+
+.box{
+    width: 32%;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+a{
+    color: yellow;
+}
+
+h2, p {
+    font-size: 20px;
+}
+
+.references {
+    gap: 5px;
+    padding: 100px;
+}
