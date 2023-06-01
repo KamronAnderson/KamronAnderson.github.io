@@ -1,7 +1,5 @@
 body {
-    /* background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(3,2,54,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
-    background: rgb(2,0,36);
+    /* background: rgb(2,0,36); */
     background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 8%, rgba(3,2,54,1) 36%, rgba(8,8,114,1) 54%, rgba(0,212,255,1) 70%, rgba(5,5,82,1) 87%);
     max-width: 1330px;
     color: azure;
@@ -75,8 +73,7 @@ body {
 
 .item {
     padding: 2rem;
-    /* background: #c2c1c1; */
-    background: rgb(2,0,36);
+    /* background: rgb(2,0,36); */
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(3,2,54,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
     color: white;
     border: 1px solid white;
@@ -191,7 +188,8 @@ h2, p {
 
 @media(max-width: 500px) {
     .container{
-        grid-template-areas:   
+    grid-template-areas:
+    'header'   
     'portions'
     'title'
     'picture'
