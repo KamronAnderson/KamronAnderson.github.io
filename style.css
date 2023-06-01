@@ -1,24 +1,34 @@
 body {
-    background: rgb(18, 70, 70);
+    /* background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(3,2,54,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 8%, rgba(3,2,54,1) 36%, rgba(8,8,114,1) 54%, rgba(0,212,255,1) 70%, rgba(5,5,82,1) 87%);
     max-width: 1330px;
     color: azure;
 }
 
 .container{
     display: grid;
-    grid-template-areas:   
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    'header header'  
     'portions portions'
     'title title'
     'picture info'
     'skills skills'
     'projects projects'
     'sidebar sidebar';
-    gap: 3rem;
+    gap: 5rem;
     ;
 }
 
 .header{
     grid-area: header;
+}
+.construction {
+    width: 200px;
+    height: 200px;
 }
 
 .title {
@@ -37,8 +47,9 @@ body {
 .projects{
     grid-area: projects;
     max-height: 500px;
-    align-content: center;
     color: black;
+    padding: 3rem;
+    align-items: center;
 }
 
 .skills{
@@ -55,21 +66,66 @@ body {
 
 .footer{
     padding: 20px;
+    color: white;
 }
 
 .portions {
     grid-area: portions;
-    grid-column-end: 3;
+}
+
+.item {
+    padding: 2rem;
+    /* background: #c2c1c1; */
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(3,2,54,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    color: white;
+    border: 1px solid white;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
 }
 
 #logo {
+    height: 200px;
     width: 1330px;
     border: 2px solid red;
+}
+
+#aboutmepic, #projectsimg {
+    width: 75px;
+    height: 75px;
+}
+
+.toggleone:hover, .toggletwo:hover{
+    transform: translateY(-10px);
+}
+
+#navbar {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: blue;
+    opacity: 40%;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
 }
 
 #picture {
     width: 450px;
     height: 400px;
+    padding-left: 5%;
 }
 
 #AboutMe {
@@ -89,13 +145,18 @@ body {
 }
 
 .box{
-    width: 32%;
+    width: 30%;
     display: inline-block;
     box-sizing: border-box;
-    background-color: #f4f4f4;
-    padding: 20px;
-    margin-top: 20px;
+    background-color: black;
+    padding: 5px;
+    margin-top: 5px;
     text-align: center;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
 }
 
 a{
@@ -114,4 +175,29 @@ h2, p {
 
 #button {
     color: green;
+}
+
+#myBtn {
+    position: sticky;
+    border: none;
+    bottom: 20px;
+    right: 10px;
+    z-index: 5;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+@media(max-width: 500px) {
+    .container{
+        grid-template-areas:   
+    'portions'
+    'title'
+    'picture'
+    'info'
+    'skills'
+    'projects'
+    'sidebar';
+    }
 }
